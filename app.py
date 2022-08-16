@@ -52,5 +52,4 @@ def test():
 
 
 if __name__ == "__main__":
-    #db_create()
-    app.run(host='0.0.0.0', port=int(args[1]),debug=True)
+    app.run(host='0.0.0.0', port=5000,debug=True)
