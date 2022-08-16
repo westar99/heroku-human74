@@ -9,7 +9,7 @@ from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods = ['post'])
 def index():
     return render_template('index.html')
 
@@ -52,4 +52,4 @@ def test():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000,debug=True)
+    app.run(host='0.0.0.0', port=int(sys.args[1]),debug=True)
