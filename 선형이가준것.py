@@ -11,6 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
+    #db_create()
     return "Hello World!"
 
 @app.route("/test", methods = ['post'])
@@ -22,23 +23,23 @@ def test():
                 {
         
                     "basicCard": {
-                        "title": "문제", # basic 카드에 들어갈 제목
-                        "description": "000란 건물의 소유자에게 돈을 빌려 주거나 건물의 매매를 약속 하기 위해 임시등기인 가등기를 설정하는 사람을 의미합니다.000에 들어갈 단어는?", # 제목 아래에 들어갈 상세 내용
+                        "title": "공공분양", # basic 카드에 들어갈 제목
+                        "description": "궁금하신 분양유형을 눌러주세요", # 제목 아래에 들어갈 상세 내용
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
-                                "label": "가등기권자", # 버튼 1 내용
-                                "blockId": "정답일때테스트" # 버튼 1에서 연결될 버튼 주소
+                                "label": "일반분양", # 버튼 1 내용
+                                "blockId": "지역 입력용 블록" # 버튼 1에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block", # 버튼 2
-                                "label": "가등기", # 버튼 2 내용
-                                "blockId": "오답일때테스트" # 버튼 2에서 연결될 버튼 주소
+                                "label": "특별분양", # 버튼 2 내용
+                                "blockId": "특별분양 블록" # 버튼 2에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block",# 버튼 3
-                                "label": "가등기권리자",# 버튼 3내용
-                                "blockId": "오답일때테스트" # 버튼 3에서 연결될 버튼 주소
+                                "label": "우선분양",# 버튼 3내용
+                                "blockId": "우선분양 블록" # 버튼 3에서 연결될 버튼 주소
                             }   
                         ]
                     }
