@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/", methods = ['post'])
 def index():
-    return render_template('index.html')
+    return 'heee'
 
 @app.route("/test", methods = ['post'])
 def test():
