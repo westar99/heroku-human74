@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return '123123123'
+    return 'I LOVE JESUS'
 
 @app.route("/test", methods = ['post'])
 def test():
