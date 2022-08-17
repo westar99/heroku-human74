@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from flask import Flask, jsonify, request, render_template
 import os,sys, json
-#import pandas as pd 
-#from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
+import pandas as pd 
+from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
 
 ## DB 연결 Local
 
