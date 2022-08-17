@@ -9,7 +9,7 @@ from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
 
 app = Flask(__name__)
 
-@app.route("/", methods = ['post'])
+@app.route("/")
 def index():
     return 'heee'
 
