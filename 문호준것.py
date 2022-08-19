@@ -76,17 +76,17 @@ def test():
                             {
                                 "action": "block", # 버튼 1
                                 "label": result[0,0], # 버튼 1 내용
-                                "blockId": "오답일때테스트" # 버튼 1에서 연결될 버튼 주소
+                                "blockId": "62ff09709465de0507b218b2" # 버튼 1에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block", # 버튼 2
                                 "label": result[1,0], # 버튼 2 내용
-                                "blockId": "정답일때테스트" # 버튼 2에서 연결될 버튼 주소
+                                "blockId": "62ff0801745ef634f048330f" # 버튼 2에서 연결될 버튼 주소
                             },
                             {
                                 "action":  "block",# 버튼 3
                                 "label": result[2,0],# 버튼 3내용
-                                "blockId": "오답일때테스트" # 버튼 3에서 연결될 버튼 주소
+                                "blockId": "62ff09709465de0507b218b2" # 버튼 3에서 연결될 버튼 주소
                             }   
                         ]
                     }
