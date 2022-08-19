@@ -1,4 +1,18 @@
-h1 {
+*{
+    border: 2px #eee solid;
+    color: blue;
+    text-align: center;
+    padding: 10px;
+}
+
+.h1{
+    border: 10px #eee solid;
+    color: red;
+    text-align: center;
+    padding: 10px;
+}
+
+.h2{
     border: 2px #eee solid;
     color: brown;
     text-align: center;
