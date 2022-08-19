@@ -25,8 +25,9 @@ app = Flask(__name__)
 def index():
     return 'I LOVE JESUS'
 
-@app.route("/test1", methods = ['post','get'])
+@app.route("/test1", methods = ['post'])
 def test1():
+    global result
     body = request.get_json()
     print(body)
     response = {
@@ -64,7 +65,8 @@ def test1():
 
 
 @app.route("/test2", methods = ['post'])
-def test():
+def test2():
+    global result
     body = request.get_json()
     print(body)
     response = {
@@ -102,6 +104,7 @@ def test():
 
 @app.route("/test3", methods = ['post'])
 def test3():
+    global result
     body = request.get_json()
     print(body)
     response = {
