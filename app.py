@@ -21,9 +21,36 @@ result = np.array(result)
 
 app = Flask(__name__)
 
-@app.route("/")
+topics = [
+    {'id':1, 'title':'html','body':'채제형은...'},
+    {'id':2, 'title':'html','body':'채은규는...'},
+    {'id':3, 'title':'html','body':'채은결은...'},
+]
+
+
+@app.route('/')
 def index():
-    return 'I LOVE JESUS'
+    litags = ''
+    for topic in topics:
+        litags = litags + f'<li>{topic["title"]}</li>'
+    return f'''<!doctype html>
+    <html>
+        <body>
+            <h1><a herf="/">WEB</a></h1>
+            <ol>
+                {litags}
+            </ol>
+            <h2>welcome</h2>
+            hello,web
+        <body>
+    </html>
+    '''
+
+@app.route('/read/<id>')
+def read(id):
+    print(id)
+    return 'Read'+id    
+    
     
 @app.route("/test", methods = ['post'])
 def test():
@@ -52,44 +79,6 @@ def test():
                             {
                                 "action":  "block",# 버튼 3
                                 "label": "가등기권리자",# 버튼 3내용
-                                "blockId": "오답일때테스트" # 버튼 3에서 연결될 버튼 주소
-                            }   
-                        ]
-                    }
-                }
-            ]
-        }
-    }
-    return jsonify(response)
-
-@app.route("/test1", methods = ['post'])
-def test1():
-    global result
-    body = request.get_json()
-    print(body)
-    response = {
-        "version": "2.0",
-        "template": {
-            "outputs": [
-                {
-        
-                    "basicCard": {
-                        "title": "문제", # basic 카드에 들어갈 제목
-                        "description": result[0,1],
-                        "buttons": [ # basic 카드에 소속된 버튼 
-                            {
-                                "action": "block", # 버튼 1
-                                "label": result[0,0], # 버튼 1 내용
-                                "blockId": "정답일때테스트" # 버튼 1에서 연결될 버튼 주소
-                            },
-                            {
-                                "action":  "block", # 버튼 2
-                                "label": result[1,0], # 버튼 2 내용
-                                "blockId": "오답일때테스트" # 버튼 2에서 연결될 버튼 주소
-                            },
-                            {
-                                "action":  "block",# 버튼 3
-                                "label": result[2,0],# 버튼 3내용
                                 "blockId": "오답일때테스트" # 버튼 3에서 연결될 버튼 주소
                             }   
                         ]
@@ -139,43 +128,7 @@ def test2():
     }
     return jsonify(response)
 
-@app.route("/test3", methods = ['post'])
-def test3():
-    global result
-    body = request.get_json()
-    print(body)
-    response = {
-        "version": "2.0",
-        "template": {
-            "outputs": [
-                {
-        
-                    "basicCard": {
-                        "title": "문제", # basic 카드에 들어갈 제목
-                        "description": result[2,0],
-                        "buttons": [ # basic 카드에 소속된 버튼 
-                            {
-                                "action": "block", # 버튼 1
-                                "label": result[0,0], # 버튼 1 내용
-                                "blockId": "오답일때테스트" # 버튼 1에서 연결될 버튼 주소
-                            },
-                            {
-                                "action":  "block", # 버튼 2
-                                "label": result[1,0], # 버튼 2 내용
-                                "blockId": "오답일때테스트" # 버튼 2에서 연결될 버튼 주소
-                            },
-                            {
-                                "action":  "block",# 버튼 3
-                                "label": result[2,0], # 버튼 3내용
-                                "blockId": "정답일때테스트" # 버튼 3에서 연결될 버튼 주소
-                            }   
-                        ]
-                    }
-                }
-            ]
-        }
-    }
-    return jsonify(response)
+
 
 if __name__== "__main__":
     app.run(debug=True)
