@@ -33,7 +33,7 @@ def test():
         
                     "basicCard": {
                         "title": "문제", # basic 카드에 들어갈 제목
-                        "description": result[0,1]
+                        "description": result[0,1],
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
@@ -71,7 +71,7 @@ def test():
         
                     "basicCard": {
                         "title": "문제", # basic 카드에 들어갈 제목
-                        "description": result[1,1]
+                        "description": result[1,1],
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
@@ -108,7 +108,7 @@ def test():
         
                     "basicCard": {
                         "title": "문제", # basic 카드에 들어갈 제목
-                        "description": result[2,0]
+                        "description": result[2,0],
                         "buttons": [ # basic 카드에 소속된 버튼 
                             {
                                 "action": "block", # 버튼 1
@@ -122,7 +122,7 @@ def test():
                             },
                             {
                                 "action":  "block",# 버튼 3
-                                "label": result[2,0]",# 버튼 3내용
+                                "label": result[2,0],"# 버튼 3내용
                                 "blockId": "정답일때테스트" # 버튼 3에서 연결될 버튼 주소
                             }   
                         ]

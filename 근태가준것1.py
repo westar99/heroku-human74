@@ -13,7 +13,7 @@ def db_create():
 		
 		# Heroku
     engine = create_engine("postgresql://uxweficayqkvnb:191795f6687a563f2d49dd25fa1d4a3b481604b2bfb416f11811f430377a463f@ec2-54-225-234-165.compute-1.amazonaws.com:5432/ddtk33j69v200c", echo = False)
-
+       #postgresql://사용자이름(username): 암호(password)@호스트이름(hostname):포트(port)/접속데이터베이스(maintenancedatabase),echo=false)
     engine.connect()
     engine.execute("""
         CREATE TABLE IF NOT EXISTS lawQuiz(
